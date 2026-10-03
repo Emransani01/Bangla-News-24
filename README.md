@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📰 Bangla News 24
 
-## Getting Started
+A modern, responsive Bangla news web application built with **Next.js, React, TypeScript, and Tailwind CSS**.
 
-First, run the development server:
+Bangla News 24 provides users with a clean and responsive interface for browsing the latest news, exploring news categories, reading individual articles, and discovering the most-read stories.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+The project consumes data from a REST API and demonstrates practical implementation of **Next.js App Router, dynamic routing, server-side data fetching, reusable components, TypeScript interfaces, responsive UI design, and modern frontend architecture**.
+
+---
+
+## ✨ Overview
+
+Bangla News 24 is designed as a modern digital news platform with a focus on simplicity, readability, and responsive user experience.
+
+The application includes:
+
+- A featured news section
+- Latest news ticker/marquee
+- Category-based news browsing
+- Most-read news section
+- Detailed article pages
+- Responsive layouts for mobile, tablet, and desktop
+- Dynamic routing for categories and articles
+- Bengali date and time formatting
+- Reusable React components
+- API-driven content
+
+---
+
+## 🚀 Features
+
+### 🏠 Home Page
+
+The homepage provides an overview of the latest news and includes:
+
+- Featured/main news
+- Additional news stories
+- News sections based on categories
+- Most-read news
+- Latest news marquee
+
+---
+
+### 📰 News Cards
+
+News articles are displayed using a reusable `NewsCard` component.
+
+Each card contains:
+
+- News image
+- Category
+- Headline
+- Description
+- Publication date
+- Link to the full article
+
+---
+
+### 🔥 Most Read News
+
+A dedicated section displays the most-read articles.
+
+Each item includes:
+
+- Ranking number
+- Article title
+- Link to the article details page
+
+---
+
+### 📢 Latest News Marquee
+
+The latest news API is used to display a continuously scrolling headline ticker.
+
+Users can click any headline to navigate directly to the corresponding article.
+
+---
+
+### 📂 Category Pages
+
+Users can browse news by category.
+
+Dynamic routing is implemented using:
+
+```text
+/category/[categoryId]
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
