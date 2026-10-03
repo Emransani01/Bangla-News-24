@@ -1,61 +1,176 @@
-# Bangla News 24
+# 📰 Bangla News 24
 
-A responsive Bangla news website built with Next.js, TypeScript, Tailwind CSS, and a news API.
+Bangla News 24 is a modern and responsive Bangla news website where users can explore the latest news, browse news by category, read detailed articles, and discover the most-read stories.
 
-## Live Project
+The project focuses on a clean news-reading experience, responsive design, smooth navigation, API-based data fetching, loading states, and proper error handling.
 
-The project is ready to be deployed on Vercel.
+---
 
-## Features
+## ✨ Features
 
-- Latest Bangla news
-- News category pages
-- News details page
-- Most-read news section
-- Scrolling latest-news marquee
-- Responsive design for mobile, tablet, and desktop
-- Skeleton loading state
-- Styled 404 page
-- Error handling
-- Article not-found handling
-- Optimized images with Next.js Image
-- Bengali date formatting
-- TypeScript interfaces for API data
+### 📰 Latest News
 
-## Tech Stack
+- Browse the latest Bangla news
+- View featured news on the homepage
+- Explore multiple news sections
+- Read news summaries and publication dates
+- Navigate directly to detailed articles
 
-- Next.js 16
-- React 19
+### 📂 News Categories
+
+Users can browse news by category.
+
+Each category page displays:
+
+- Category title
+- News cards
+- News images
+- News descriptions
+- Publication dates
+- Links to full articles
+
+### 📖 News Details
+
+Users can open any news article and view:
+
+- Full article title
+- Category
+- Publication date
+- Author/byline
+- Article images
+- Image captions
+- Article text
+- Tags
+- Word count
+- News source
+
+### 🔥 Most Read News
+
+The homepage includes a **Most Read** section where users can discover popular articles.
+
+Each item includes:
+
+- Ranking number
+- News title
+- Direct link to the article
+
+### 📢 Latest News Marquee
+
+A scrolling latest-news marquee displays recent headlines.
+
+Users can click any headline to open the corresponding article.
+
+### ⏳ Loading Skeleton
+
+The application includes a responsive loading skeleton while news data is being loaded.
+
+Skeleton layouts are used for:
+
+- Featured news
+- Secondary news
+- News cards
+- Most-read news
+
+### ❌ Custom 404 Page
+
+A custom styled 404 page is included for unavailable pages.
+
+The page provides:
+
+- 404 status
+- Clear Bangla error message
+- Explanation for the missing page
+- Back to Home button
+- Responsive design
+
+### ⚠️ Error Handling
+
+The application includes a dedicated error page for unexpected errors.
+
+Users are provided with:
+
+- Friendly error message
+- Clear explanation
+- Try Again button
+
+### 📰 Article Not Found Handling
+
+If an article does not exist or the API returns an unsuccessful response, the application uses Next.js `notFound()` handling to display the custom 404 page.
+
+### 📱 Responsive Design
+
+The application is designed to work across:
+
+- Mobile devices
+- Tablets
+- Laptops
+- Desktop screens
+
+The layout automatically adapts between different screen sizes.
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- Next.js
+- React
 - TypeScript
+
+### Styling
+
 - Tailwind CSS
 - DaisyUI
-- React Fast Marquee
-- Next.js Image Optimization
 
-## Project Structure
+### Additional Libraries
+
+- React Fast Marquee
+
+### Data
+
+- REST API
+- Server-side data fetching
+- TypeScript interfaces for API responses
+
+---
+
+## 📂 Project Structure
 
 ```text
-src/
-├── app/
-│   ├── category/
-│   │   └── [categoryId]/
-│   │       └── page.tsx
-│   ├── news/
-│   │   └── [newsId]/
-│   │       └── page.tsx
-│   ├── error.tsx
-│   ├── loading.tsx
-│   ├── not-found.tsx
-│   ├── globals.css
-│   ├── layout.tsx
-│   └── page.tsx
+bangla-news-24/
 │
-└── components/
-    ├── Footer.tsx
-    ├── Header.tsx
-    ├── MainNews.tsx
-    ├── Marquee.tsx
-    ├── MostRead.tsx
-    ├── NaveLinks.tsx
-    └── NewsCard.tsx
+├── src/
+│   ├── app/
+│   │   ├── category/
+│   │   │   └── [categoryId]/
+│   │   │       └── page.tsx
+│   │   │
+│   │   ├── news/
+│   │   │   └── [newsId]/
+│   │   │       └── page.tsx
+│   │   │
+│   │   ├── error.tsx
+│   │   ├── loading.tsx
+│   │   ├── not-found.tsx
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   │
+│   └── components/
+│       ├── Footer.tsx
+│       ├── Header.tsx
+│       ├── MainNews.tsx
+│       ├── Marquee.tsx
+│       ├── MostRead.tsx
+│       ├── NaveLinks.tsx
+│       └── NewsCard.tsx
+│
+├── public/
+│   └── logo.webp
+│
+├── next.config.ts
+├── package.json
+├── tsconfig.json
+└── README.md
 ```
