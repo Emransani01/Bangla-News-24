@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 interface BodyItem {
   type: "image" | "text";
@@ -60,32 +61,18 @@ const NewsDetails = async ({
   );
 
   if (!res.ok) {
-    return (
-      <main className="mx-auto w-full max-w-4xl px-4 py-8 sm:px-6 sm:py-10">
-        <p className="text-center text-red-600">
-          News details load করা যায়নি।
-        </p>
-      </main>
-    );
+    notFound();
   }
 
   const result: NewsResponse = await res.json();
 
   if (!result.success || !result.data) {
-    return (
-      <main className="mx-auto w-full max-w-4xl px-4 py-8 sm:px-6 sm:py-10">
-        <p className="text-center text-red-600">
-          News পাওয়া যায়নি।
-        </p>
-      </main>
-    );
+    notFound();
   }
 
   const news = result.data;
 
-  const formattedDate = new Date(
-    news.firstPublished,
-  ).toLocaleString("bn-BD", {
+  const formattedDate = new Date(news.firstPublished).toLocaleString("bn-BD", {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -96,7 +83,6 @@ const NewsDetails = async ({
 
   return (
     <main className="mx-auto w-full max-w-4xl px-4 py-8 sm:px-6 sm:py-10">
-
       {/* Back to Home */}
       <div className="mb-5">
         <Link
@@ -121,32 +107,22 @@ const NewsDetails = async ({
 
       {/* Author + Date + Word Count */}
       <div className="mb-8 border-b border-gray-200 pb-5 text-sm leading-6 text-gray-500">
-        <p>
-          প্রকাশিত: {formattedDate}
-        </p>
+        <p>প্রকাশিত: {formattedDate}</p>
 
         {news.byline.length > 0 && (
-          <p className="mt-1">
-            লেখক: {news.byline.join(", ")}
-          </p>
+          <p className="mt-1">লেখক: {news.byline.join(", ")}</p>
         )}
 
-        <p className="mt-1">
-          {news.wordCount} শব্দ
-        </p>
+        <p className="mt-1">{news.wordCount} শব্দ</p>
       </div>
 
       {/* Article Body */}
       <article>
         {news.body.map((item, index) => {
-
           /* IMAGE */
           if (item.type === "image" && item.url) {
             return (
-              <figure
-                key={`image-${index}`}
-                className="my-6 sm:my-8"
-              >
+              <figure key={`image-${index}`} className="my-6 sm:my-8">
                 <Image
                   src={item.url}
                   alt={item.altText || news.title}
@@ -208,7 +184,6 @@ const NewsDetails = async ({
           Source: {news.source}
         </p>
       </div>
-
     </main>
   );
 };
