@@ -10,8 +10,9 @@ const notoSerifBengali = Noto_Serif_Bengali({
 });
 
 export const metadata: Metadata = {
-  title: "Bangla News 24",
-  description: "Bangla News 24",
+  title: "Bangla News 24 | সর্বশেষ বাংলা সংবাদ",
+  description:
+    "Bangla News 24 - সর্বশেষ খবর, গুরুত্বপূর্ণ সংবাদ এবং বিভিন্ন বিভাগের আপডেট এক জায়গায়।",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -26,9 +27,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 
         <Marquee />
 
-        <main className="w-full flex-1">
-          {children}
-        </main>
+        <main className="w-full flex-1">{children}</main>
 
         <Footer />
       </body>
