@@ -1,87 +1,61 @@
-# 📰 Bangla News 24
+# Bangla News 24
 
-A modern, responsive Bangla news web application built with **Next.js, React, TypeScript, and Tailwind CSS**.
+A responsive Bangla news website built with Next.js, TypeScript, Tailwind CSS, and a news API.
 
-Bangla News 24 provides users with a clean and responsive interface for browsing the latest news, exploring news categories, reading individual articles, and discovering the most-read stories.
+## Live Project
 
-The project consumes data from a REST API and demonstrates practical implementation of **Next.js App Router, dynamic routing, server-side data fetching, reusable components, TypeScript interfaces, responsive UI design, and modern frontend architecture**.
+The project is ready to be deployed on Vercel.
 
----
+## Features
 
-## ✨ Overview
-
-Bangla News 24 is designed as a modern digital news platform with a focus on simplicity, readability, and responsive user experience.
-
-The application includes:
-
-- A featured news section
-- Latest news ticker/marquee
-- Category-based news browsing
+- Latest Bangla news
+- News category pages
+- News details page
 - Most-read news section
-- Detailed article pages
-- Responsive layouts for mobile, tablet, and desktop
-- Dynamic routing for categories and articles
-- Bengali date and time formatting
-- Reusable React components
-- API-driven content
+- Scrolling latest-news marquee
+- Responsive design for mobile, tablet, and desktop
+- Skeleton loading state
+- Styled 404 page
+- Error handling
+- Article not-found handling
+- Optimized images with Next.js Image
+- Bengali date formatting
+- TypeScript interfaces for API data
 
----
+## Tech Stack
 
-## 🚀 Features
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+- DaisyUI
+- React Fast Marquee
+- Next.js Image Optimization
 
-### 🏠 Home Page
-
-The homepage provides an overview of the latest news and includes:
-
-- Featured/main news
-- Additional news stories
-- News sections based on categories
-- Most-read news
-- Latest news marquee
-
----
-
-### 📰 News Cards
-
-News articles are displayed using a reusable `NewsCard` component.
-
-Each card contains:
-
-- News image
-- Category
-- Headline
-- Description
-- Publication date
-- Link to the full article
-
----
-
-### 🔥 Most Read News
-
-A dedicated section displays the most-read articles.
-
-Each item includes:
-
-- Ranking number
-- Article title
-- Link to the article details page
-
----
-
-### 📢 Latest News Marquee
-
-The latest news API is used to display a continuously scrolling headline ticker.
-
-Users can click any headline to navigate directly to the corresponding article.
-
----
-
-### 📂 Category Pages
-
-Users can browse news by category.
-
-Dynamic routing is implemented using:
+## Project Structure
 
 ```text
-/category/[categoryId]
+src/
+├── app/
+│   ├── category/
+│   │   └── [categoryId]/
+│   │       └── page.tsx
+│   ├── news/
+│   │   └── [newsId]/
+│   │       └── page.tsx
+│   ├── error.tsx
+│   ├── loading.tsx
+│   ├── not-found.tsx
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+│
+└── components/
+    ├── Footer.tsx
+    ├── Header.tsx
+    ├── MainNews.tsx
+    ├── Marquee.tsx
+    ├── MostRead.tsx
+    ├── NaveLinks.tsx
+    └── NewsCard.tsx
 ```
