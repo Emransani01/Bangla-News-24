@@ -6,6 +6,12 @@ The project focuses on a clean news-reading experience, responsive design, smoot
 
 ---
 
+## 📸 Screenshot
+
+![Bangla News 24 Homepage](./Capture.PNG)
+
+---
+
 ## ✨ Features
 
 ### 📰 Latest News
@@ -135,42 +141,26 @@ The layout automatically adapts between different screen sizes.
 
 ---
 
-## 📂 Project Structure
+## 📦 Dependencies
 
-```text
-bangla-news-24/
-│
-├── src/
-│   ├── app/
-│   │   ├── category/
-│   │   │   └── [categoryId]/
-│   │   │       └── page.tsx
-│   │   │
-│   │   ├── news/
-│   │   │   └── [newsId]/
-│   │   │       └── page.tsx
-│   │   │
-│   │   ├── error.tsx
-│   │   ├── loading.tsx
-│   │   ├── not-found.tsx
-│   │   ├── globals.css
-│   │   ├── layout.tsx
-│   │   └── page.tsx
-│   │
-│   └── components/
-│       ├── Footer.tsx
-│       ├── Header.tsx
-│       ├── MainNews.tsx
-│       ├── Marquee.tsx
-│       ├── MostRead.tsx
-│       ├── NaveLinks.tsx
-│       └── NewsCard.tsx
-│
-├── public/
-│   └── logo.webp
-│
-├── next.config.ts
-├── package.json
-├── tsconfig.json
-└── README.md
-```
+The project uses the following main dependencies:
+
+- Next.js
+- React
+- React DOM
+- React Fast Marquee
+- Tailwind CSS
+- DaisyUI
+
+All project dependencies and development dependencies are defined in `package.json`.
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to run the project locally.
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Emransani01/Bangla-News-24.git
